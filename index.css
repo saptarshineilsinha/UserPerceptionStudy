@@ -1,0 +1,22 @@
+a {
+    font-size: 28px
+}
+
+h2 {
+    font-size: 35px
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center
+}
+
+body {
+    background-image: url("background.jpg");
+
+}
+
+.features {
+    font-size: 25px;
+    font-weight: bold;
+}

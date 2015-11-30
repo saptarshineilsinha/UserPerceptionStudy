@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="../Slider/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../Slider/slider.css"/>
+
+    <script type="text/javascript" src="../Slider/jquery.js"></script>
+    <script type="text/javascript" src="../Slider/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../XML3D/xml3d-4.8.js"></script>
+    <script type="text/javascript" src="../XML3D/camera.js"></script>
+    <script type="text/javascript" src="../XML3D/blender-xflow.js"></script>
+
+
+    <script type="text/javascript" src="../pipelines/alchemyPipeline.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".slider").slider({
+                orientation: "horizontal",
+                range: "min"
+            });
+            //alchemy ssao
+            $("#slider_alchemy_radius").slider({min: 0.0, max: 1.5, value: 0.4, step: 0.05,
+                slide: function (event, ui) {
+                    window.radius_alchemy = ui.value;
+                    $('#value_alchemy_radius').text(ui.value);
+                    var xml3dElement1 = document.getElementById("Scene1");
+                    xml3dElement1.getRenderInterface().context.requestRedraw();
+                }});
+            $("#slider_sigma").slider({min: 0.0, max: 3.0, value: 0.35, step: 0.1,
+                slide: function (event, ui) {
+                    window.alchemy_sigma = ui.value;
+                    $('#value_sigma').text(ui.value);
+                    var xml3dElement1 = document.getElementById("Scene1");
+                    xml3dElement1.getRenderInterface().context.requestRedraw();
+                }});
+            window.radius_alchemy = $('#slider_alchemy_radius').slider("value");
+            window.alchemy_sigma = $('#slider_sigma').slider("value");
+            $('#value_alchemy_radius').text($('#slider_alchemy_radius').slider("value"));
+            $('#value_beta').text($('#slider_beta').slider("value"));
+            $('#value_sigma').text($('#slider_sigma').slider("value"));
+        });
+    </script>
+    <script>
+        XML3D.options.setValue("renderer-ssao", true);
+        window.onlyAO=false;
+        //
+    </script>
+
+    <title>SSAO Produced with Cornell Box</title>
+</head>
+<body>
+<table cellspacing="50">
+    <tr>
+        <td>
+             <span>
+              <h1 style="font-family:verdana">Alchemy Screen Space Ambient Occlusion</h1>
+            </span>
+            <xml3d id="Scene1" activeView="#v_Camera"
+                   style="width: 1280px; height: 1080px; background-color:rgb(65,65,65);">
+                <defs>
+                    <lightshader compute="intensity = xflow.blenderPoint(color, energy)"
+                                 script="urn:xml3d:lightshader:point" id="ls_Lamp">
+                        <float3 name="attenuation">1.0000 0.0000 0.0011</float3>
+                        <float3 name="color">1.0000 1.0000 1.0000</float3>
+                        <float name="energy">1.0000</float>
+                    </lightshader>
+                </defs>
+                <view id="v_view"></view>
+                <group id="island_mesh01_2" class="layer-0"
+                       style="transform:matrix3d(0.020324,0.000000,0.000000,0.000000,0.000000,-0.000000,0.020324,0.000000,0.000000,-0.020324,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                    <model src="assets/assets-0.xml#island_mesh01_2"></model>
+                </group>
+                <group id="island_mesh01_4" class="layer-0"
+                       style="transform:matrix3d(0.020324,0.000000,0.000000,0.000000,0.000000,-0.000000,0.020324,0.000000,0.000000,-0.020324,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                    <model src="assets/assets-1.xml#island_mesh01_4"></model>
+                </group>
+                <group id="island_mesh01_1" class="layer-0"
+                       style="transform:matrix3d(0.020324,0.000000,0.000000,0.000000,0.000000,-0.000000,0.020324,0.000000,0.000000,-0.020324,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                    <model src="assets/assets-2.xml#island_mesh01_1"></model>
+                </group>
+                <group id="island_mesh01_3" class="layer-0"
+                       style="transform:matrix3d(0.020324,0.000000,0.000000,0.000000,0.000000,-0.000000,0.020324,0.000000,0.000000,-0.020324,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                    <model src="assets/assets-3.xml#island_mesh01_3"></model>
+                </group>
+                <group id="island_mesh01_5" class="layer-0"
+                       style="transform:matrix3d(0.020324,0.000000,0.000000,0.000000,0.000000,-0.000000,0.020324,0.000000,0.000000,-0.020324,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                    <model src="assets/assets-4.xml#island_mesh01_5"></model>
+                </group>
+                <group id="Terrain_Terrain_1" class="layer-0"
+                       style="transform:matrix3d(0.020324,0.000000,0.000000,0.000000,0.000000,-0.000000,0.020324,0.000000,0.000000,-0.020324,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                    <model src="assets/assets-5.xml#Terrain_Terrain_1"></model>
+                </group>
+                <group id="Lamp" class="layer-0"
+                       style="transform:matrix3d(-0.290865,0.955171,-0.055189,0.000000,-0.771101,-0.199883,0.604525,0.000000,0.566393,0.218391,0.794672,0.000000,4.076245,1.005454,5.903862,1.000000);">
+                    <light shader="#ls_Lamp"></light>
+                </group>
+                <group id="Camera" class="layer-0"
+                       style="transform:matrix3d(0.801534,-0.597851,-0.010819,0.000000,0.100037,0.116236,0.988171,0.000000,-0.589522,-0.793135,0.152975,0.000000,-8.691916,-13.111638,4.970445,1.000000);">
+                    <view id="v_Camera"></view>
+                </group>
+            </xml3d>
+        </td>
+
+
+        <div class="controls">
+            <td>
+                <label><b> Alchemy-SSAO Parameters </b></label>
+
+                <div class="option">
+                    <br/>
+                    <br/>
+
+                    <label>Radius Alchemy</label>
+
+                    <div id="slider_alchemy_radius" class="slider">
+                    </div>
+                    <span id="value_alchemy_radius"></span>
+
+                    <div class="option">
+                    </div>
+
+                    <div class="option">
+                    </div>
+                    <label>Sigma</label>
+
+                    <div id="slider_sigma" class="slider"></div>
+                    <span id="value_sigma"></span>
+                </div>
+            </td>
+
+        </div>
+    </tr>
+</table>
+</body>
+</html>

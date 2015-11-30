@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="../Slider/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../Slider/slider.css"/>
+
+    <script type="text/javascript" src="../Slider/jquery.js"></script>
+    <script type="text/javascript" src="../Slider/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../XML3D/xml3d-4.8.js"></script>
+    <script type="text/javascript" src="../XML3D/camera.js"></script>
+    <script type="text/javascript" src="../XML3D/blender-xflow.js"></script>
+
+
+    <script type="text/javascript" src="../pipelines/alchemyPipeline.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".slider").slider({
+                orientation: "horizontal",
+                range: "min"
+            });
+            //alchemy ssao
+            $("#slider_alchemy_radius").slider({min: 0.0, max: 1.5, value: 0.4, step: 0.05,
+                slide: function (event, ui) {
+                    window.radius_alchemy = ui.value;
+                    $('#value_alchemy_radius').text(ui.value);
+                    var xml3dElement1 = document.getElementById("Scene1");
+                    xml3dElement1.getRenderInterface().context.requestRedraw();
+                }});
+            $("#slider_sigma").slider({min: 0.0, max: 3.0, value: 0.35, step: 0.1,
+                slide: function (event, ui) {
+                    window.alchemy_sigma = ui.value;
+                    $('#value_sigma').text(ui.value);
+                    var xml3dElement1 = document.getElementById("Scene1");
+                    xml3dElement1.getRenderInterface().context.requestRedraw();
+                }});
+            window.radius_alchemy = $('#slider_alchemy_radius').slider("value");
+            window.alchemy_sigma = $('#slider_sigma').slider("value");
+            $('#value_alchemy_radius').text($('#slider_alchemy_radius').slider("value"));
+            $('#value_beta').text($('#slider_beta').slider("value"));
+            $('#value_sigma').text($('#slider_sigma').slider("value"));
+        });
+    </script>
+    <script>
+        XML3D.options.setValue("renderer-ssao", true);
+        window.onlyAO=false;
+        //
+    </script>
+
+    <title>SSAO Produced with Cornell Box</title>
+</head>
+<body>
+<table cellspacing="50">
+    <tr>
+        <td>
+             <span>
+              <h1 style="font-family:verdana">Alchemy Screen Space Ambient Occlusion</h1>
+            </span>
+            <xml3d id="Scene1" activeView="#v_Camera" style="width: 1280px; height: 1080px; background-color:rgb(65,65,65);">
+                <defs>
+                    <lightshader script="urn:xml3d:lightshader:point" compute="intensity = xflow.blenderPoint(color, energy)" id="ls_Lamp">
+                        <float3 name="attenuation">1.0000 0.0000 0.0011</float3>
+                        <float3 name="color">1.0000 1.0000 1.0000</float3>
+                        <float name="energy">1.0000</float>
+                    </lightshader>
+                    <!--<lightshader script="urn:xml3d:lightshader:point" compute="intensity = xflow.blenderPoint(color, energy)" id="ls_Point">-->
+                        <!--<float3 name="attenuation">1.0000 0.0000 0.0016</float3>-->
+                        <!--<float3 name="color">1.0000 1.0000 1.0000</float3>-->
+                        <!--<float name="energy">1.0000</float>-->
+                    <!--</lightshader>-->
+                </defs>
+                <view id="v_view"></view>
+                <group id="Point" class="layer-0" style="transform:matrix3d(1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,-2.119382,-2.384844,2.772249,1.000000);">
+                    <light shader="#ls_Point"></light>
+                </group>
+                <group id="door_usemtl_1" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-0.xml#door_usemtl_1"></model>
+                </group>
+                <group id="propulsion_usemtl_1" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-1.xml#propulsion_usemtl_1"></model>
+                </group>
+                <group id="green__1" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-2.xml#green__1"></model>
+                </group>
+                <group id="cockpit2_usemtl_3" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-3.xml#cockpit2_usemtl_3"></model>
+                </group>
+                <group id="mesh01" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-4.xml#mesh01"></model>
+                </group>
+                <group id="cockpit2_usemtl_2" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-5.xml#cockpit2_usemtl_2"></model>
+                </group>
+                <group id="cockpit2_usemtl_1" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-6.xml#cockpit2_usemtl_1"></model>
+                </group>
+                <group id="cockpit2_usemtl_4" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-7.xml#cockpit2_usemtl_4"></model>
+                </group>
+                <group id="dash_usemtl_3" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-0.xml#dash_usemtl_3"></model>
+                </group>
+                <group id="lights.2_mesh01_1" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-1.xml#lights-2_mesh01_1"></model>
+                </group>
+                <group id="dash_usemtl_4" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-2.xml#dash_usemtl_4"></model>
+                </group>
+                <group id="dash_usemtl_1" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-3.xml#dash_usemtl_1"></model>
+                </group>
+                <group id="red_mesh01_1" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-4.xml#red_mesh01_1"></model>
+                </group>
+                <group id="windshield_usemtl_2" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-5.xml#windshield_usemtl_2"></model>
+                </group>
+                <group id="door_usemtl_2" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-6.xml#door_usemtl_2"></model>
+                </group>
+                <group id="windshield_usemtl_1" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-7.xml#windshield_usemtl_1"></model>
+                </group>
+                <group id="dash_usemtl_2" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-0.xml#dash_usemtl_2"></model>
+                </group>
+                <group id="cushion_usemtl_1" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-1.xml#cushion_usemtl_1"></model>
+                </group>
+                <group id="couplers__1" class="layer-0" style="transform:matrix3d(-0.020664,0.000000,0.000000,0.000000,0.000000,0.000000,-0.020664,0.000000,0.000000,0.020664,0.000000,0.000000,-5.504889,-1.369025,4.966221,1.000000);">
+                    <model src="assets/assets-2.xml#couplers__1"></model>
+                </group>
+                <group id="astronaut.001" class="layer-0" style="transform:matrix3d(0.854362,0.000000,0.000000,0.000000,0.000000,-0.000000,0.854362,0.000000,0.000000,-0.854362,-0.000000,0.000000,5.246062,-0.813515,1.672884,1.000000);">
+                    <model src="assets/assets-3.xml#astronaut-001"></model>
+                </group>
+                <group id="astronautvisir" class="layer-0" style="transform:matrix3d(0.854362,0.000000,0.000000,0.000000,0.000000,-0.000000,0.854362,0.000000,0.000000,-0.854362,-0.000000,0.000000,6.737939,0.000000,1.760036,1.000000);">
+                    <model src="assets/assets-4.xml#astronautvisir"></model>
+                </group>
+                <group id="astronaut" class="layer-0" style="transform:matrix3d(0.853305,0.000000,0.032624,0.000000,-0.032624,-0.000000,0.853305,0.000000,0.000000,-0.853929,-0.000000,0.000000,-0.135637,-1.352216,1.723096,1.000000);">
+                    <model src="assets/assets-5.xml#astronaut"></model>
+                </group>
+                <group id="visor" class="layer-0" style="transform:matrix3d(0.853305,0.000000,0.032624,0.000000,-0.032624,-0.000000,0.853305,0.000000,0.000000,-0.853929,-0.000000,0.000000,-1.874162,-1.982067,-0.158369,1.000000);">
+                    <model src="assets/assets-6.xml#visor"></model>
+                </group>
+                <group id="vue_ready_shasta" class="layer-0" style="transform:matrix3d(0.009528,0.000000,0.000000,0.000000,0.000000,-0.000000,0.009528,0.000000,0.000000,-0.009528,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                    <model src="assets/assets-7.xml#vue_ready_shasta"></model>
+                </group>
+                <group id="Lamp" class="layer-0" style="transform:matrix3d(-0.290865,0.955171,-0.055189,0.000000,-0.771101,-0.199883,0.604525,0.000000,0.566393,0.218391,0.794672,0.000000,4.076245,1.005454,5.903862,1.000000);">
+                    <light shader="#ls_Lamp"></light>
+                </group>
+                <group id="Camera" class="layer-0" style="transform:matrix3d(0.999147,-0.039852,-0.010811,0.000000,0.028456,0.474808,0.879629,0.000000,-0.029922,-0.879186,0.475537,0.000000,0.171357,-29.345413,13.052497,1.000000);">
+                    <view id="v_Camera"></view>
+                </group>
+            </xml3d>
+        </td>
+
+
+        <div class="controls">
+            <td>
+                <label><b> Alchemy-SSAO Parameters </b></label>
+
+                <div class="option">
+                    <br/>
+                    <br/>
+
+                    <label>Radius Alchemy</label>
+
+                    <div id="slider_alchemy_radius" class="slider">
+                    </div>
+                    <span id="value_alchemy_radius"></span>
+
+                    <div class="option">
+                    </div>
+
+                    <div class="option">
+                    </div>
+                    <label>Sigma</label>
+
+                    <div id="slider_sigma" class="slider"></div>
+                    <span id="value_sigma"></span>
+                </div>
+            </td>
+
+        </div>
+    </tr>
+</table>
+</body>
+</html>

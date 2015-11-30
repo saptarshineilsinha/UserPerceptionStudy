@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml3d>
+  <asset id="Plane">
+    <assetdata name="Mesh-001">
+      <float3 name="position">-25.0 25.0 1.5307579422779716e-15 -25.0 -25.0 -1.5307579422779716e-15 25.0 -25.0 -1.5307579422779716e-15 25.0 25.0 1.5307579422779716e-15</float3>
+      <float3 name="normal">0.0 -0.0 1.0 0.0 -0.0 1.0 0.0 -0.0 1.0 0.0 -0.0 1.0</float3>
+      <float2 name="texcoord">0.0 1.0 0.0 0.0 1.0 0.0 1.0 1.0</float2>
+    </assetdata>
+    <assetmesh includes="Mesh-001" name="Mesh-001_PlaneDefault" shader="../shared-materials.xml#PlaneDefault">
+      <int name="index">0 1 2 2 3 0 </int>
+    </assetmesh>
+  </asset>
+</xml3d>

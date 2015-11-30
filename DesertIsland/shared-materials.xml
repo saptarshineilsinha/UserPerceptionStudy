@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml3d>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_palm_stems" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">0.0 0.0 0.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\plvs1c.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_plants" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">0.0 0.0 0.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\arl1b.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_grass" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">0.0 0.0 0.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\grs1.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_palm_leaves" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">0.0 0.0 0.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\lv1.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_rocks" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">0.0 0.0 0.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\rc1.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">0.0 0.0 0.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\snd1.jpg"/>
+    </texture>
+  </shader>
+</xml3d>

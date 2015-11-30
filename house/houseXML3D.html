@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="../Slider/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../Slider/slider.css"/>
+
+    <script type="text/javascript" src="../Slider/jquery.js"></script>
+    <script type="text/javascript" src="../Slider/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../XML3D/xml3d-4.8.js"></script>
+    <script type="text/javascript" src="../XML3D/camera.js"></script>
+    <script type="text/javascript" src="../XML3D/blender-xflow.js"></script>
+
+
+    <script type="text/javascript" src="../pipelines/xml3DSSAOPipeline.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".slider").slider({
+                orientation: "horizontal",
+                range: "min"
+            });
+            $("#slider_radius_xml3d").slider({min: 0.0, max: 10.0, value: 0.5, step: 0.2,
+                slide: function (event, ui) {
+                    window.radius_ssao = ui.value;
+                    $('#value_radius_ssao').text(ui.value);
+                    var xml3dElement1 = document.getElementById("Scene1");
+                    xml3dElement1.getRenderInterface().context.requestRedraw();
+                }});
+            $("#slider_uScale").slider({min: 0.0, max: 10.0, value: 1.0, step: 0.5,
+                slide: function (event, ui) {
+                    window.uscale = ui.value;
+                    $('#value_uScale').text(ui.value);
+                    var xml3dElement1 = document.getElementById("Scene1");
+                    xml3dElement1.getRenderInterface().context.requestRedraw();
+                }});
+            $("#slider_uBias").slider({min: 0.0, max: 1.0, value: 0.01, step: 0.01,
+                slide: function (event, ui) {
+                    window.bias = ui.value;
+                    $('#value_uBias').text(ui.value);
+                    var xml3dElement1 = document.getElementById("Scene1");
+                    xml3dElement1.getRenderInterface().context.requestRedraw();
+                }});
+            $("#slider_uIntensity").slider({min: 0.0, max: 10.0, value: 5.0, step: 0.5,
+                slide: function (event, ui) {
+                    window.intensity = ui.value;
+                    $('#value_uIntensity').text(ui.value);
+                    var xml3dElement1 = document.getElementById("Scene1");
+                    xml3dElement1.getRenderInterface().context.requestRedraw();
+                }});
+            window.radius_ssao = $('#slider_radius_xml3d').slider("value");
+            window.uscale = $('#slider_uScale').slider("value");
+            window.bias = $('#slider_uBias').slider("value");
+            window.intensity = $('#slider_uIntensity').slider("value");
+            $('#value_radius_ssao').text($('#slider_radius_xml3d').slider("value"));
+            $('#value_uScale').text($('#slider_uScale').slider("value"));
+            $('#value_uBias').text($('#slider_uBias').slider("value"));
+            $('#value_uIntensity').text($('#slider_uIntensity').slider("value"));
+        });
+    </script>
+    <script>
+        XML3D.options.setValue("renderer-ssao", true);
+        window.onlyAO=false;
+        //
+    </script>
+
+    <title>SSAO Produced with Cornell Box</title>
+</head>
+<body>
+<table cellspacing="50">
+    <tr>
+        <td>
+             <span>
+              <h1 style="font-family:verdana">XML3D Ambient Occlusion</h1>
+            </span>
+             <xml3d id="Scene1" activeView="#v_Camera" style="width: 1280px; height: 1080px; background-color:rgb(65,65,65);">
+             <defs>
+                 <lightshader compute="intensity = xflow.blenderPoint(color, energy)" script="urn:xml3d:lightshader:point" id="ls_Lamp">
+                     <float3 name="attenuation">1.0000 0.0000 0.0011</float3>
+                     <float3 name="color">1.0000 1.0000 1.0000</float3>
+                     <float name="energy">1.0000</float>
+                 </lightshader>
+             </defs>
+             <view id="v_view"></view>
+             <group id="Box003" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Box003"></model>
+             </group>
+             <group id="Cylinder037" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Cylinder037"></model>
+             </group>
+             <group id="Cylinder061" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Cylinder061"></model>
+             </group>
+             <group id="Box042" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Box042"></model>
+             </group>
+             <group id="Box002" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Box002"></model>
+             </group>
+             <group id="Box001" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-5.xml#Box001"></model>
+             </group>
+             <group id="Box012" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-6.xml#Box012"></model>
+             </group>
+             <group id="Cylinder054" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-7.xml#Cylinder054"></model>
+             </group>
+             <group id="Box013" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Box013"></model>
+             </group>
+             <group id="Box045" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Box045"></model>
+             </group>
+             <group id="Cylinder029" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Cylinder029"></model>
+             </group>
+             <group id="Cylinder009" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Cylinder009"></model>
+             </group>
+             <group id="Box029" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Box029"></model>
+             </group>
+             <group id="Plane004" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-5.xml#Plane004"></model>
+             </group>
+             <group id="Box027" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-6.xml#Box027"></model>
+             </group>
+             <group id="Cylinder010" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-7.xml#Cylinder010"></model>
+             </group>
+             <group id="Plane002" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Plane002"></model>
+             </group>
+             <group id="Box022" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Box022"></model>
+             </group>
+             <group id="Teapot001" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Teapot001"></model>
+             </group>
+             <group id="Cylinder011" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Cylinder011"></model>
+             </group>
+             <group id="Cylinder050" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Cylinder050"></model>
+             </group>
+             <group id="Cylinder056" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-5.xml#Cylinder056"></model>
+             </group>
+             <group id="Cylinder057" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-6.xml#Cylinder057"></model>
+             </group>
+             <group id="Cylinder062" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-7.xml#Cylinder062"></model>
+             </group>
+             <group id="Cylinder004" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Cylinder004"></model>
+             </group>
+             <group id="Box020" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Box020"></model>
+             </group>
+             <group id="Cylinder034" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Cylinder034"></model>
+             </group>
+             <group id="Box038" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Box038"></model>
+             </group>
+             <group id="Box017" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Box017"></model>
+             </group>
+             <group id="Cylinder060" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-5.xml#Cylinder060"></model>
+             </group>
+             <group id="Box007" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-6.xml#Box007"></model>
+             </group>
+             <group id="Box025" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-7.xml#Box025"></model>
+             </group>
+             <group id="Box033" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Box033"></model>
+             </group>
+             <group id="Cylinder058" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Cylinder058"></model>
+             </group>
+             <group id="Cylinder002" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Cylinder002"></model>
+             </group>
+             <group id="Cylinder038" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Cylinder038"></model>
+             </group>
+             <group id="Box023" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Box023"></model>
+             </group>
+             <group id="Cylinder059" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-5.xml#Cylinder059"></model>
+             </group>
+             <group id="Cylinder040" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-6.xml#Cylinder040"></model>
+             </group>
+             <group id="Box026" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-7.xml#Box026"></model>
+             </group>
+             <group id="Cylinder045" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Cylinder045"></model>
+             </group>
+             <group id="Plane003" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Plane003"></model>
+             </group>
+             <group id="Box024" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Box024"></model>
+             </group>
+             <group id="Box032" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Box032"></model>
+             </group>
+             <group id="Cylinder019" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Cylinder019"></model>
+             </group>
+             <group id="Cylinder033" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-5.xml#Cylinder033"></model>
+             </group>
+             <group id="Box008" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-6.xml#Box008"></model>
+             </group>
+             <group id="Cylinder001" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-7.xml#Cylinder001"></model>
+             </group>
+             <group id="Cylinder031" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Cylinder031"></model>
+             </group>
+             <group id="Box010" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Box010"></model>
+             </group>
+             <group id="Cylinder023" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Cylinder023"></model>
+             </group>
+             <group id="Box037" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Box037"></model>
+             </group>
+             <group id="Box043" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Box043"></model>
+             </group>
+             <group id="Plane005" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-5.xml#Plane005"></model>
+             </group>
+             <group id="Cylinder003" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-6.xml#Cylinder003"></model>
+             </group>
+             <group id="Box041" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-7.xml#Box041"></model>
+             </group>
+             <group id="Cylinder014" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Cylinder014"></model>
+             </group>
+             <group id="Cylinder027" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Cylinder027"></model>
+             </group>
+             <group id="Cylinder007" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Cylinder007"></model>
+             </group>
+             <group id="Cylinder025" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Cylinder025"></model>
+             </group>
+             <group id="Cylinder051" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Cylinder051"></model>
+             </group>
+             <group id="Box019" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-5.xml#Box019"></model>
+             </group>
+             <group id="Cylinder006" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-6.xml#Cylinder006"></model>
+             </group>
+             <group id="Box009" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-7.xml#Box009"></model>
+             </group>
+             <group id="Cylinder039" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Cylinder039"></model>
+             </group>
+             <group id="Cylinder055" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Cylinder055"></model>
+             </group>
+             <group id="Box046" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Box046"></model>
+             </group>
+             <group id="Cylinder035" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Cylinder035"></model>
+             </group>
+             <group id="Cylinder046" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Cylinder046"></model>
+             </group>
+             <group id="Cylinder043" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-5.xml#Cylinder043"></model>
+             </group>
+             <group id="Cylinder052" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-6.xml#Cylinder052"></model>
+             </group>
+             <group id="Cylinder053" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-7.xml#Cylinder053"></model>
+             </group>
+             <group id="Box028" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Box028"></model>
+             </group>
+             <group id="Cylinder005" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Cylinder005"></model>
+             </group>
+             <group id="Box005" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Box005"></model>
+             </group>
+             <group id="Cylinder012" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Cylinder012"></model>
+             </group>
+             <group id="Box006" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Box006"></model>
+             </group>
+             <group id="Cylinder047" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-5.xml#Cylinder047"></model>
+             </group>
+             <group id="Box011" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-6.xml#Box011"></model>
+             </group>
+             <group id="Cylinder041" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-7.xml#Cylinder041"></model>
+             </group>
+             <group id="Cylinder017" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Cylinder017"></model>
+             </group>
+             <group id="Box044" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Box044"></model>
+             </group>
+             <group id="Plane001" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Plane001"></model>
+             </group>
+             <group id="Cylinder042" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Cylinder042"></model>
+             </group>
+             <group id="Cylinder036" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Cylinder036"></model>
+             </group>
+             <group id="Cylinder049" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-5.xml#Cylinder049"></model>
+             </group>
+             <group id="Box004" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-6.xml#Box004"></model>
+             </group>
+             <group id="Box021" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-7.xml#Box021"></model>
+             </group>
+             <group id="Cylinder048" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-0.xml#Cylinder048"></model>
+             </group>
+             <group id="Cylinder015" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-1.xml#Cylinder015"></model>
+             </group>
+             <group id="Cylinder008" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-2.xml#Cylinder008"></model>
+             </group>
+             <group id="Cylinder044" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-3.xml#Cylinder044"></model>
+             </group>
+             <group id="Cylinder021" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                 <model src="assets/assets-4.xml#Cylinder021"></model>
+             </group>
+             <group id="Lamp" class="layer-0" style="transform:matrix3d(-0.290865,0.955171,-0.055189,0.000000,-0.771101,-0.199883,0.604525,0.000000,0.566393,0.218391,0.794672,0.000000,4.076245,1.005454,5.903862,1.000000);">
+                 <light shader="#ls_Lamp"></light>
+             </group>
+             <group id="Camera" class="layer-0" style="transform:matrix3d(0.996790,0.079325,-0.010815,0.000000,-0.000563,0.142037,0.989861,0.000000,0.080057,-0.986678,0.141626,0.000000,4.592728,-21.058697,5.138130,1.000000);">
+                 <view id="v_Camera"></view>
+             </group>
+             </xml3d>
+        </td>
+
+
+        <div class="controls">
+            <td>
+                <label><b> XML3D SSAO Parameters </b></label>
+
+                <div class="option">
+                    <label>Radius SSAO-XML3D</label>
+                    <br/>
+
+                    <div id="slider_radius_xml3d" class="slider">
+                    </div>
+                    <span id="value_radius_ssao"></span>
+
+                    <div class="option">
+                    </div>
+                    <label>Scale</label>
+
+                    <div id="slider_uScale" class="slider"></div>
+                    <span id="value_uScale"></span>
+
+                    <div class="option">
+                    </div>
+                    <label>Bias</label>
+
+                    <div id="slider_uBias" class="slider">
+                    </div>
+                    <span id="value_uBias"></span>
+
+                    <div class="option">
+                    </div>
+                    <label>Intensity-XML3D-SSAO</label>
+
+                    <div id="slider_uIntensity" class="slider"></div>
+                    <span id="value_uIntensity"></span>
+
+                </div>
+            </td>
+
+        </div>
+    </tr>
+</table>
+</body>
+</html>

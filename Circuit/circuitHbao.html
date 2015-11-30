@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="../Slider/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../Slider/slider.css"/>
+
+    <script type="text/javascript" src="../Slider/jquery.js"></script>
+    <script type="text/javascript" src="../Slider/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../XML3D/xml3d-4.8.js"></script>
+    <script type="text/javascript" src="../XML3D/camera.js"></script>
+    <script type="text/javascript" src="../XML3D/blender-xflow.js"></script>
+
+
+    <script type="text/javascript" src="../pipelines/hbaoPipeline.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".slider").slider({
+                orientation: "horizontal",
+                range: "min"
+            });
+            //hbao
+            $("#slider_radius_hbao").slider({min: 0.0, max: 3.0, value: 0.6, step: 0.1,
+                slide: function (event, ui) {
+                    window.radius_hbao = ui.value;
+                    $('#value_radius').text(ui.value);
+                    var xml3dElement1 = document.getElementById("Scene1");
+                    xml3dElement1.getRenderInterface().context.requestRedraw();
+                }});
+            $("#slider_angleBias").slider({min: 0.0, max: 1.0, value: 0.3, step: 0.01,
+                slide: function (event, ui) {
+                    window.angleBias = ui.value;
+                    $('#value_angleBias').text(ui.value);
+                    var xml3dElement1 = document.getElementById("Scene1");
+                    xml3dElement1.getRenderInterface().context.requestRedraw();
+                }});
+            window.radius_hbao = $('#slider_radius_hbao').slider("value");
+            window.angleBias = $('#slider_angleBias').slider("value");
+            $('#value_radius').text($('#slider_radius_hbao').slider("value"));
+            $('#value_angleBias').text($('#slider_angleBias').slider("value"));
+        });
+    </script>
+    <script>
+        XML3D.options.setValue("renderer-ssao", true);
+        window.onlyAO=false;
+        //
+    </script>
+
+    <title>SSAO Produced with Cornell Box</title>
+</head>
+<body>
+<table cellspacing="50">
+    <tr>
+        <td>
+             <span>
+              <h1 style="font-family:verdana">Horizon Based Ambient Occlusion</h1>
+            </span>
+            <xml3d id="Scene1" activeView="#v_Camera" style="width: 1280px; height: 1080px; background-color:rgb(65,65,65);">
+                <defs>
+                    <lightshader script="urn:xml3d:lightshader:point" compute="intensity = xflow.blenderPoint(color, energy)" id="ls_Lamp">
+                        <float3 name="attenuation">1.0000 0.0000 0.0011</float3>
+                        <float3 name="color">1.0000 1.0000 1.0000</float3>
+                        <float name="energy">1.0000</float>
+                    </lightshader>
+                </defs>
+                <view id="v_view"></view>
+                <group id="course" class="layer-0" style="transform:matrix3d(0.272556,-0.357323,0.037875,0.000000,0.357457,0.274470,0.017086,0.000000,-0.036587,0.019693,0.449082,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                    <model src="assets/assets-0.xml#course"></model>
+                </group>
+                <group id="beginner_course" class="layer-0" style="transform:matrix3d(0.272556,-0.357323,0.037875,0.000000,0.357457,0.274470,0.017086,0.000000,-0.036587,0.019693,0.449082,0.000000,0.000000,0.000000,0.000000,1.000000);">
+                    <model src="assets/assets-1.xml#beginner_course"></model>
+                </group>
+                <group id="Lamp" class="layer-0" style="transform:matrix3d(-0.290865,0.955171,-0.055189,0.000000,-0.771101,-0.199883,0.604525,0.000000,0.566393,0.218391,0.794672,0.000000,4.076245,1.005454,5.903862,1.000000);">
+                    <light shader="#ls_Lamp"></light>
+                </group>
+                <group id="Camera" class="layer-0" style="transform:matrix3d(0.718376,-0.695571,-0.010825,0.000000,0.559325,0.568271,0.603509,0.000000,-0.413632,-0.439601,0.797282,0.000000,-13.404664,-24.489128,34.512764,1.000000);">
+                    <view id="v_Camera"></view>
+                </group>
+            </xml3d>
+        </td>
+
+
+        <div class="controls">
+            <td>
+                <label><b> HBAO Parameters </b></label>
+
+                <div class="option">
+                    <label>Radius Hbao</label>
+
+                    <div id="slider_radius_hbao" class="slider">
+                    </div>
+                    <span id="value_radius"></span>
+
+                    <div class="option">
+                    </div>
+                    <label>Angle Bias</label>
+
+                    <div id="slider_angleBias" class="slider"></div>
+                    <span id="value_angleBias"></span>
+                </div>
+            </td>
+
+        </div>
+    </tr>
+</table>
+</body>
+</html>

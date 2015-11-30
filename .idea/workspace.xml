@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="718a3ae2-5823-41da-a676-204ad40c9e60" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/textures/Alpha 2_tga.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/textures/Alpha_tga.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/Astronaut_D_tga.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/Astronaut_D_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/textures/Decal_tga.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/textures/Glass_tga.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/Sand_070717b_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CityModel/textures/ang1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/textures/arl1b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/bc_kankyaku_mip_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/bc_spot1_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/bmq1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/cockpit_mtl1_diffcol.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CityModel/textures/cty1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CityModel/textures/cty2x.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/d10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/d17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/d17b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/door_mtl1_diffcol.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/door_mtl2_diffcol.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/ef_rainbowRed2_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/enkei_yama_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/textures/grs1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/hana_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/lc_EleArrowALL_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/lc_ami_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/lc_block_wall_mip_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/lc_comp1a_070709_128x256a_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/lc_kakyutest_1_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/lc_kinoko_mip_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/lc_kusa_kanban_mip_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/lc_lake_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/lc_popAll_128x1024_mip_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/lc_tatemonoall_071123mip_a_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/luigi_capall_070607a_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/textures/lv1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/mainROAD_all_mip_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/textures/plvs1c.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/textures/rc1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/textures/snd1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/t_kusa_070712c_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/t_tree_otubo_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/t_waki_070712a_mip_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/textures/txt_001_diff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/vj2c.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/vue_ready_shast0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/textures/yama_tga_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/textures/yx1_02_01_01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/UserPerceptionStudy.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pipelines/alchemyPipeline.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/assets/assets-0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CityModel/assets/assets-0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/assets/assets-0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/assets/assets-0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StanfordDragon/assets/assets-0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/assets/assets-0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/assets/assets-0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/assets/assets-1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CityModel/assets/assets-1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/assets/assets-1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/assets/assets-1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StanfordDragon/assets/assets-1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/assets/assets-1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/assets/assets-1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CityModel/assets/assets-2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/assets/assets-2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/assets/assets-2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/assets/assets-2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/assets/assets-2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/assets/assets-3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/assets/assets-3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/assets/assets-3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/assets/assets-3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/assets/assets-4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/assets/assets-4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/assets/assets-4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/assets/assets-4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/assets/assets-5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/assets/assets-5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/assets/assets-5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/assets/assets-5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/assets/assets-6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/assets/assets-6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/assets/assets-6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/assets/assets-7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/assets/assets-7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/assets/assets-7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XML3D/blender-xflow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XML3D/camera.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/circuitAlchemy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/circuitHbao.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/circuitSAO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/circuitXML3D.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CityModel/cityHbao.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CityModel/cityModelAlchemy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CityModel/citySAO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CityModel/cityXML3D.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/desertIslandAlchemy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/desertIslandHbao.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/desertIslandXML3D.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/desertSAO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StanfordDragon/dragonHBAO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StanfordDragon/dragonSAO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StanfordDragon/dragonXML3D.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pipelines/hbaoPipeline.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/houseAlchemy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/houseHBAO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/houseSAO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/houseXML3D.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Slider/jquery-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Slider/jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Slider/jquery-ui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Slider/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Slider/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/oceanAlchemy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/oceanHBAO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/oceanSAO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/oceanXML3D.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pipelines/saoPipeline.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Circuit/shared-materials.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CityModel/shared-materials.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DesertIsland/shared-materials.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ocean/shared-materials.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SponzaModel/shared-materials.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StanfordDragon/shared-materials.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/house/shared-materials.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/shared-materials.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Slider/slider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/spaceShipAlchemy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/spaceShipSao.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/spaceShipXML3D.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spaceShip/spcaeShipHbao.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SponzaModel/sponza.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SponzaModel/sponzaAlchemy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SponzaModel/sponzaHBAO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SponzaModel/sponzaSAO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SponzaModel/sponzaXML3D.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StanfordDragon/stanfordDragonAlchemy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XML3D/xml3D-dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pipelines/xml3DSSAOPipeline.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XML3D/xml3d-4.8.js" />
+    </list>
+    <ignored path="UserPerceptionStudy.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="UserPerceptionStudy" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="122" column="52" selection-start="5068" selection-end="5068" vertical-scroll-proportion="0.7790262" vertical-offset="1658" max-vertical-offset="2788">
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/SponzaModel/sponzaXML3D.html" />
+        <option value="$PROJECT_DIR$/StanfordDragon/dragonXML3D.html" />
+        <option value="$PROJECT_DIR$/pipelines/saoPipeline.js" />
+        <option value="$PROJECT_DIR$/Circuit/circuitSAO.html" />
+        <option value="$PROJECT_DIR$/CityModel/citySAO.html" />
+        <option value="$PROJECT_DIR$/StanfordDragon/dragonSAO.html" />
+        <option value="$PROJECT_DIR$/SponzaModel/sponzaSAO.html" />
+        <option value="$PROJECT_DIR$/Ocean/oceanSAO.html" />
+        <option value="$PROJECT_DIR$/DesertIsland/desertSAO.html" />
+        <option value="$PROJECT_DIR$/house/houseSAO.html" />
+        <option value="$PROJECT_DIR$/index.css" />
+        <option value="$PROJECT_DIR$/spaceShip/spaceShipSao.html" />
+        <option value="$PROJECT_DIR$/spaceShip/spcaeShipHbao.html" />
+        <option value="$PROJECT_DIR$/spaceShip/spaceShipAlchemy.html" />
+        <option value="$PROJECT_DIR$/spaceShip/spaceShipXML3D.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserPerceptionStudy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserPerceptionStudy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserPerceptionStudy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\UserPerceptionStudy\spaceShip" />
+      <recent name="E:\UserPerceptionStudy" />
+      <recent name="E:\UserPerceptionStudy\pipelines" />
+      <recent name="E:\UserPerceptionStudy\house" />
+      <recent name="E:\UserPerceptionStudy\interiorRoom" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="name" value="Dart" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <browser start="false" url="" with-js-debugger="false" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">C:\Users\SaptarshiNeil\AppData\Roaming\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="718a3ae2-5823-41da-a676-204ad40c9e60" name="Default" comment="" />
+      <created>1448705390609</created>
+      <updated>1448705390609</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24944155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/house/houseXML3D.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7123" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/houseHBAO.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="351" column="14" selection-start="2388" selection-end="33227" vertical-scroll-proportion="-0.65384614" vertical-offset="5950" max-vertical-offset="6545" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CityModel/cityHbao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1955" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/houseSAO.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="314" column="21" selection-start="29798" selection-end="29798" vertical-scroll-proportion="-0.42307693" vertical-offset="5327" max-vertical-offset="6273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ocean/oceanAlchemy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2329" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Circuit/circuitAlchemy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="5197" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2023" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Circuit/circuitHbao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="4958" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1904" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Circuit/circuitSAO.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="4144" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1632" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Circuit/circuitXML3D.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="6572" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spaceShip/shared-materials.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3893">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spaceShip/spaceShipSao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="38" selection-start="2359" selection-end="2765" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="2890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spaceShip/spcaeShipHbao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="38" selection-start="2934" selection-end="3340" vertical-scroll-proportion="0.0" vertical-offset="734" max-vertical-offset="3162">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spaceShip/spaceShipAlchemy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="38" selection-start="3041" selection-end="3448" vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="3281">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spaceShip/spaceShipXML3D.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="38" selection-start="4015" selection-end="4421" vertical-scroll-proportion="0.0" vertical-offset="1023" max-vertical-offset="3740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="17" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="52" selection-start="5068" selection-end="5068" vertical-scroll-proportion="0.7790262" vertical-offset="1658" max-vertical-offset="2788">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

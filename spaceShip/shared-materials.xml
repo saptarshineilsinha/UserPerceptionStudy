@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml3d>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_door" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\door_mtl1_diffcol.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_propulsion" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">0.5019609928131104 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_green" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">0.5019609928131104 1.0 0.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_red_joystick" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 0.0 0.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="default" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\vj2c.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_blue_joystick" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">0.20392200350761414 0.6941180229187012 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_cockpit" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\cockpit_mtl1_diffcol.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_2" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\bmq1.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_lights" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">0.5019609928131104 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_3" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\d10.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_4" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\d17.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_red" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 0.0 0.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_windshield_liner" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_2_door" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\door_mtl2_diffcol.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_windshield_glass" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">0.0 0.0 0.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">0.800000011920929</float>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_displays" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\d17b.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_cushion" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">1.0 1.0 1.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\yx1_02_01_01.jpg"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="material_1_couplers" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">0.5019609928131104 1.0 0.0</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">1</float>
+    <float name="alpha">1.0</float>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="astronaut-001" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">0.6399999856948853 0.6399999856948853 0.6399999856948853</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">0.0 0.0 0.0</float3>
+    <float name="specular_hardness">48</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures/Astronaut_D_tga.png"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="astronautvisir" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">0.6399999856948853 0.6399999856948853 0.6399999856948853</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">0.0 0.0 0.0</float3>
+    <float name="specular_hardness">48</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures/Astronaut_D_tga_001.png"/>
+    </texture>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="astronaut" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">0.800000011920929 0.800000011920929 0.800000011920929</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">50</float>
+    <float name="alpha">1</float>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="visor" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">0.800000011920929 0.800000011920929 0.800000011920929</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">50</float>
+    <float name="alpha">1</float>
+  </shader>
+  <shader compute="(diffuseColor, specularColor, shininess, transparency) = xflow.blenderMaterial(diffuse_color, diffuse_intensity, specular_color, specular_intensity, specular_hardness, alpha)" id="Dflt" script="urn:xml3d:shader:phong">
+    <float name="diffuse_intensity">0.800000011920929</float>
+    <float3 name="diffuse_color">0.5717340111732483 0.5717340111732483 0.5717340111732483</float3>
+    <float name="specular_intensity">0.5</float>
+    <float3 name="specular_color">1.0 1.0 1.0</float3>
+    <float name="specular_hardness">4</float>
+    <float name="alpha">1.0</float>
+    <texture name="diffuseTexture" wrapS="repeat" wrapT="repeat">
+      <img src="textures\vue_ready_shast0.jpg"/>
+    </texture>
+  </shader>
+</xml3d>
