@@ -46,15 +46,16 @@
              <span>
               <h1 style="font-family:verdana">SAO Ambient Occlusion</h1>
             </span>
-            <xml3d id="Scene1" activeView="#v_Camera"
+            <xml3d id="Scene1" activeView="#camera"
                    style="width: 1280px; height: 1080px; background-color:rgb(65,65,65);">
                 <defs>
                     <lightshader compute="intensity = xflow.blenderPoint(color, energy)"
                                  script="urn:xml3d:lightshader:point" id="ls_Lamp">
                         <float3 name="attenuation">1.0000 0.0000 0.0011</float3>
                         <float3 name="color">1.0000 1.0000 1.0000</float3>
-                        <float name="energy">1.0000</float>
+                        <float name="energy">4.0000</float>
                     </lightshader>
+                    <transform id="t_camera" rotation="1 0 0 1.2"></transform>
                 </defs>
                 <view id="v_view"></view>
                 <group id="island_mesh01_2" class="layer-0"
@@ -85,9 +86,8 @@
                        style="transform:matrix3d(-0.290865,0.955171,-0.055189,0.000000,-0.771101,-0.199883,0.604525,0.000000,0.566393,0.218391,0.794672,0.000000,4.076245,1.005454,5.903862,1.000000);">
                     <light shader="#ls_Lamp"></light>
                 </group>
-                <group id="Camera" class="layer-0"
-                       style="transform:matrix3d(0.801534,-0.597851,-0.010819,0.000000,0.100037,0.116236,0.988171,0.000000,-0.589522,-0.793135,0.152975,0.000000,-8.691916,-13.111638,4.970445,1.000000);">
-                    <view id="v_Camera"></view>
+                <group id="cameraGroup" transform="#t_camera">
+                    <view id="camera" position="0 0 18.5"></view>
                 </group>
             </xml3d>
         </td>

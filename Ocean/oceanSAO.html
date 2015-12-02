@@ -46,13 +46,14 @@
              <span>
               <h1 style="font-family:verdana">SAO Ambient Occlusion</h1>
             </span>
-            <xml3d id="Scene1" activeView="#v_Camera" style="width: 1280px; height: 1080px; background-color:rgb(65,65,65);">
+            <xml3d id="Scene1" activeView="#camera" style="width: 1280px; height: 1080px; background-color:rgb(65,65,65);">
                 <defs>
                     <lightshader script="urn:xml3d:lightshader:point" compute="intensity = xflow.blenderPoint(color, energy)" id="ls_Lamp">
                         <float3 name="attenuation">1.0000 0.0000 0.0011</float3>
                         <float3 name="color">1.0000 1.0000 1.0000</float3>
-                        <float name="energy">1.0000</float>
+                        <float name="energy">3.0000</float>
                     </lightshader>
+                    <transform id="t_camera" rotation="1 1 1 1.7"></transform>
                 </defs>
                 <view id="v_view"></view>
                 <group id="Ocean" class="layer-0" style="transform:matrix3d(4.199739,0.000000,0.000000,0.000000,0.000000,-0.000001,4.199739,0.000000,0.000000,-4.199739,-0.000001,0.000000,0.000000,0.000000,0.000000,1.000000);">
@@ -82,8 +83,8 @@
                 <group id="Lamp" class="layer-0" style="transform:matrix3d(-0.290865,0.955171,-0.055189,0.000000,-0.771101,-0.199883,0.604525,0.000000,0.566393,0.218391,0.794672,0.000000,4.076245,1.005454,5.903862,1.000000);">
                     <light shader="#ls_Lamp"></light>
                 </group>
-                <group id="Camera" class="layer-0" style="transform:matrix3d(-0.144730,0.989413,-0.010748,0.000000,-0.562952,-0.073405,0.823224,0.000000,0.813719,0.125196,0.567615,0.000000,13.551240,1.261079,7.819603,1.000000);">
-                    <view id="v_Camera"></view>
+                <group id="cameraGroup" transform="#t_camera">
+                    <view id="camera" position="0 0 15.5"></view>
                 </group>
             </xml3d>
         </td>

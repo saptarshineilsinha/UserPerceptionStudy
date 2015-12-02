@@ -55,13 +55,14 @@
              <span>
               <h1 style="font-family:verdana">Horizon Based Ambient Occlusion</h1>
             </span>
-            <xml3d id="Scene1" activeView="#v_Camera" style="width: 1280px; height: 1080px; background-color:rgb(65,65,65);">
+            <xml3d id="Scene1" activeView="#camera" style="width: 1280px; height: 1080px; background-color:rgb(65,65,65);">
                 <defs>
                     <lightshader script="urn:xml3d:lightshader:point" compute="intensity = xflow.blenderPoint(color, energy)" id="ls_Lamp">
                         <float3 name="attenuation">1.0000 0.0000 0.0011</float3>
                         <float3 name="color">1.0000 1.0000 1.0000</float3>
-                        <float name="energy">1.0000</float>
+                        <float name="energy">5.0000</float>
                     </lightshader>
+                    <transform id="t_camera" rotation="1 0 0 1.2"></transform>
                 </defs>
                 <view id="v_view"></view>
                 <group id="course" class="layer-0" style="transform:matrix3d(0.272556,-0.357323,0.037875,0.000000,0.357457,0.274470,0.017086,0.000000,-0.036587,0.019693,0.449082,0.000000,0.000000,0.000000,0.000000,1.000000);">
@@ -73,8 +74,8 @@
                 <group id="Lamp" class="layer-0" style="transform:matrix3d(-0.290865,0.955171,-0.055189,0.000000,-0.771101,-0.199883,0.604525,0.000000,0.566393,0.218391,0.794672,0.000000,4.076245,1.005454,5.903862,1.000000);">
                     <light shader="#ls_Lamp"></light>
                 </group>
-                <group id="Camera" class="layer-0" style="transform:matrix3d(0.718376,-0.695571,-0.010825,0.000000,0.559325,0.568271,0.603509,0.000000,-0.413632,-0.439601,0.797282,0.000000,-13.404664,-24.489128,34.512764,1.000000);">
-                    <view id="v_Camera"></view>
+                <group id="cameraGroup" transform="#t_camera">
+                    <view id="camera" position="0 0 45.5"></view>
                 </group>
             </xml3d>
         </td>

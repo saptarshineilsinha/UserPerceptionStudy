@@ -57,19 +57,21 @@
               <h1 style="font-family:verdana">Alchemy Screen Space Ambient Occlusion</h1>
             </span>
 
-            <xml3d id="Scene1" activeView="#v_Camera_Perspective2" style="width: 1280px; height: 1080px; background-color:rgb(122,122,122);">
+            <xml3d id="Scene1" activeView="#camera" style="width: 1280px; height: 1080px; background-color:rgb(122,122,122);">
                 <defs>
                     <lightshader script="urn:xml3d:lightshader:directional" compute="intensity = xflow.blenderSun(color, energy)" id="ls_Sun_Light">
                         <float3 name="color">1.0000 0.9569 0.8980</float3>
-                        <float name="energy">1.0000</float>
+                        <float name="energy">2.0000</float>
                     </lightshader>
+                    <transform id="t_camera" rotation="1 0 0 1.2"></transform>
+
                 </defs>
                 <view id="v_view"></view>
                 <group id="default" class="layer-0">
                     <model src="assets/assets-0.xml#default"></model>
                 </group>
-                <group id="Camera_Perspective2" class="layer-0" style="transform:matrix3d(0.948605,-0.316406,0.005983,0.000000,0.236228,0.720554,0.651919,0.000000,-0.210582,-0.617000,0.758265,0.000000,-6.654858,-14.333828,22.276533,1.000000);">
-                    <view id="v_Camera_Perspective2"></view>
+                <group id="cameraGroup" transform="#t_camera">
+                    <view id="camera" position="0 0 29.5"></view>
                 </group>
                 <group id="Plane" class="layer-0">
                     <model src="assets/assets-1.xml#Plane"></model>
