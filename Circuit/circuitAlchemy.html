@@ -46,6 +46,31 @@
         window.onlyAO=false;
         //
     </script>
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("sceneView").onchange = function () {
+                var skillsSelect = document.getElementById("sceneView");
+                var selectedText = skillsSelect.options[skillsSelect.selectedIndex].value;
+
+                if (selectedText=='scene2') {
+                    document.getElementById("cameraGroup").transform = "#t_camera1";
+                }
+
+                if (selectedText=='scene1') {
+                    document.getElementById("cameraGroup").transform = "#t_camera";
+                }
+
+                if (selectedText=='scene3') {
+                    document.getElementById("cameraGroup").transform = "#t_camera2";
+                }
+
+                if (selectedText=='scene4') {
+                    document.getElementById("cameraGroup").transform = "#t_camera3";
+                }
+            }
+        });
+
+    </script>
 
     <title>SSAO Produced with Cornell Box</title>
 </head>
@@ -64,6 +89,9 @@
                         <float name="energy">5.0000</float>
                     </lightshader>
                     <transform id="t_camera" rotation="1 0 0 1.2"></transform>
+                    <transform id="t_camera1" translation="0 0 20"></transform>
+                    <transform id="t_camera2" translation="0 0 -3"></transform>
+                    <transform id="t_camera3" rotation="1 0 0 1.5" translation="0 0 14"></transform>
                 </defs>
                 <view id="v_view"></view>
                 <group id="course" class="layer-0" style="transform:matrix3d(0.272556,-0.357323,0.037875,0.000000,0.357457,0.274470,0.017086,0.000000,-0.036587,0.019693,0.449082,0.000000,0.000000,0.000000,0.000000,1.000000);">
@@ -105,6 +133,13 @@
 
                     <div id="slider_sigma" class="slider"></div>
                     <span id="value_sigma"></span>
+                    <br/>
+                    <select id="sceneView">
+                        <option value="scene1">Scene View1</option>
+                        <option value="scene2">Scene View2</option>
+                        <option value="scene3">Scene View3</option>
+                        <option value="scene4">Scene View4</option>
+                    </select>
                 </div>
             </td>
 

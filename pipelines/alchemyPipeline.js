@@ -495,6 +495,8 @@ XML3D.shaders.register("alchemy-ssao", {
                 uniforms["fieldOfView"] = scene.activeView.fieldOfView;
                 uniforms["far"] = scene.activeView.getClippingPlanes().far;
                 uniforms["near"] = scene.activeView.getClippingPlanes().near;
+                console.log(scene.activeView.getClippingPlanes().far);
+                console.log(scene.activeView.getClippingPlanes().near);
                 uniforms["uRandomTexSize"] = [64, 64];
                 uniforms["sNormalTex"] = [this.inputs.normalBuffer.colorTarget.handle];
                 uniforms["sRandomNormals"] = [this.randomVectorTexture];
@@ -516,10 +518,52 @@ XML3D.shaders.register("alchemy-ssao", {
         var xml3dElement = document.getElementById("Scene1");
         var renderInterface = xml3dElement.getRenderInterface();
         var ssaoRenderTree = new MySSAOPass(renderInterface, true);
+        var count=0
         xml3dElement.addEventListener("load", function a() {
             renderInterface.setRenderPipeline(ssaoRenderTree);
         });
+        xml3dElement.addEventListener("framedrawn", function c() {
+            count++;
+            if (count % 2 == 0) {
+                readBackFrameBuffer(xml3dElement, renderInterface, "alchemy-ssao", "result");
+            }
+
+        });
     });
+
+
+    function readBackFrameBuffer(xml3dElement, renderInterface, algorithm, parameter) {
+        var target = renderInterface.context.canvasTarget;
+        var c_data = new Uint8Array(target.width * target.height * 4);
+        var gl = renderInterface.context.gl;
+        gl.readPixels(0, 0, target.width, target.height, gl.RGBA, gl.UNSIGNED_BYTE, c_data);
+
+        var canvas = document.createElement('canvas');
+        canvas.width = target.width;
+        canvas.height = target.height;
+        var context1 = canvas.getContext('2d');
+        // Copy the pixels to a 2D canvas
+        var imageData = context1.createImageData(canvas.width, canvas.height);
+        imageData.data.set(c_data);
+        context1.putImageData(imageData, 0, 0);
+        var img = new Image();
+        img.src = canvas.toDataURL();
+        img.onload = function () {
+            var formData = {frame: algorithm + parameter, data: img.src};
+            $.ajax({
+                url: 'http://localhost:8080',
+                data: formData,
+                type: 'POST',
+                jsonpCallback: 'callback',
+                success: function () {
+                    console.log('Success: ')
+                },
+                error: function (xhr, status, error) {
+                    console.log('Error: ' + error.message);
+                }
+            });
+        }
+    }
 
 })(XML3D.webgl);
 

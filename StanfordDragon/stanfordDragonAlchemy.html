@@ -47,6 +47,32 @@
         //
     </script>
 
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("sceneView").onchange = function () {
+                var skillsSelect = document.getElementById("sceneView");
+                var selectedText = skillsSelect.options[skillsSelect.selectedIndex].value;
+
+                if (selectedText == 'scene2') {
+                    document.getElementById("cameraGroup").transform = "#t_camera1";
+                }
+
+                if (selectedText == 'scene1') {
+                    document.getElementById("cameraGroup").transform = "#t_camera";
+                }
+
+                if (selectedText == 'scene3') {
+                    document.getElementById("cameraGroup").transform = "#t_camera2";
+                }
+
+                if (selectedText == 'scene4') {
+                    document.getElementById("cameraGroup").transform = "#t_camera3";
+                }
+            }
+        });
+
+    </script>
+
     <title>SSAO Produced with Cornell Box</title>
 </head>
 <body>
@@ -57,13 +83,18 @@
               <h1 style="font-family:verdana">Alchemy Screen Space Ambient Occlusion</h1>
             </span>
 
-            <xml3d id="Scene1" activeView="#camera" style="width: 1280px; height: 1080px; background-color:rgb(122,122,122);">
+            <xml3d id="Scene1" activeView="#camera"
+                   style="width: 1280px; height: 1080px; background-color:rgb(122,122,122);">
                 <defs>
-                    <lightshader script="urn:xml3d:lightshader:directional" compute="intensity = xflow.blenderSun(color, energy)" id="ls_Sun_Light">
+                    <lightshader script="urn:xml3d:lightshader:directional"
+                                 compute="intensity = xflow.blenderSun(color, energy)" id="ls_Sun_Light">
                         <float3 name="color">1.0000 0.9569 0.8980</float3>
                         <float name="energy">2.0000</float>
                     </lightshader>
                     <transform id="t_camera" rotation="1 0 0 1.2"></transform>
+                    <transform id="t_camera1" translation="0 -13 2" rotation="1 0 0 .9"></transform>
+                    <transform id="t_camera2" translation="-2 2 8" rotation="1 0 0 1.5"></transform>
+                    <transform id="t_camera3" translation="2 -6 7" rotation="1 0 0 0.7"></transform>
 
                 </defs>
                 <view id="v_view"></view>
@@ -76,11 +107,14 @@
                 <group id="Plane" class="layer-0">
                     <model src="assets/assets-1.xml#Plane"></model>
                 </group>
-                <group id="LightPreset" class="layer-0" style="transform:matrix3d(1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,4.969950,1.000000);">
-                    <group id="Sun_Light" class="layer-0" style="transform:matrix3d(0.863248,-0.444444,0.239316,0.000000,0.239316,0.777778,0.581196,0.000000,-0.444444,-0.444444,0.777778,0.000000,-28.186800,-28.186800,49.326900,1.000000);">
+                <group id="LightPreset" class="layer-0"
+                       style="transform:matrix3d(1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,4.969950,1.000000);">
+                    <group id="Sun_Light" class="layer-0"
+                           style="transform:matrix3d(0.863248,-0.444444,0.239316,0.000000,0.239316,0.777778,0.581196,0.000000,-0.444444,-0.444444,0.777778,0.000000,-28.186800,-28.186800,49.326900,1.000000);">
                         <light shader="#ls_Sun_Light"></light>
                     </group>
-                    <group id="Sky_Light" class="layer-0" style="transform:matrix3d(1.000000,0.000000,0.000000,0.000000,0.000000,-0.000000,1.000000,0.000000,0.000000,-1.000000,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);"></group>
+                    <group id="Sky_Light" class="layer-0"
+                           style="transform:matrix3d(1.000000,0.000000,0.000000,0.000000,0.000000,-0.000000,1.000000,0.000000,0.000000,-1.000000,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);"></group>
                 </group>
             </xml3d>
         </td>
@@ -109,6 +143,13 @@
 
                     <div id="slider_sigma" class="slider"></div>
                     <span id="value_sigma"></span>
+                    <br/>
+                    <select id="sceneView">
+                        <option value="scene1">Scene View1</option>
+                        <option value="scene2">Scene View2</option>
+                        <option value="scene3">Scene View3</option>
+                        <option value="scene4">Scene View4</option>
+                    </select>
                 </div>
             </td>
 

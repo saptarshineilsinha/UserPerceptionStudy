@@ -63,6 +63,32 @@
         //
     </script>
 
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("sceneView").onchange = function () {
+                var skillsSelect = document.getElementById("sceneView");
+                var selectedText = skillsSelect.options[skillsSelect.selectedIndex].value;
+
+                if (selectedText=='scene2') {
+                    document.getElementById("cameraGroup").transform = "#t_camera1";
+                }
+
+                if (selectedText=='scene1') {
+                    document.getElementById("cameraGroup").transform = "#t_camera";
+                }
+
+                if (selectedText=='scene3') {
+                    document.getElementById("cameraGroup").transform = "#t_camera2";
+                }
+
+                if (selectedText=='scene4') {
+                    document.getElementById("cameraGroup").transform = "#t_camera3";
+                }
+            }
+        });
+
+    </script>
+
     <title>SSAO Produced with Cornell Box</title>
 </head>
 <body>
@@ -72,16 +98,20 @@
              <span>
               <h1 style="font-family:verdana">XML3D Ambient Occlusion</h1>
             </span>
-             <xml3d id="Scene1" activeView="#camera" style="width: 1280px; height: 1080px; background-color:rgb(65,65,65);">
-             <defs>
-                 <lightshader compute="intensity = xflow.blenderPoint(color, energy)" script="urn:xml3d:lightshader:point" id="ls_Lamp">
-                     <float3 name="attenuation">1.0000 0.0000 0.0011</float3>
-                     <float3 name="color">1.0000 1.0000 1.0000</float3>
-                     <float name="energy">2.0000</float>
-                 </lightshader>
-                 <transform id="t_camera" rotation="1 0 0 1.4"></transform>
+<xml3d id="Scene1" activeView="#camera" style="width: 1280px; height: 1080px; background-color:rgb(65,65,65);">
+<defs>
+    <lightshader compute="intensity = xflow.blenderPoint(color, energy)" script="urn:xml3d:lightshader:point" id="ls_Lamp">
+        <float3 name="attenuation">1.0000 0.0000 0.0011</float3>
+        <float3 name="color">1.0000 1.0000 1.0000</float3>
+        <float name="energy">2.0000</float>
+    </lightshader>
+    <transform id="t_camera" rotation="1 0 0 1.4"></transform>
+    <transform id="t_camera1" translation="0 8 3" rotation="1 0 0 1.6"></transform>
+    <transform id="t_camera2" translation="4 -2 2" rotation="1 0 0 1.2"></transform>
+    <transform id="t_camera3" translation="-2 -3 3" rotation="1 0 0 1.3"></transform>
 
-             </defs>
+
+</defs>
              <view id="v_view"></view>
              <group id="Box003" class="layer-0" style="transform:matrix3d(0.052167,0.000000,0.000000,0.000000,0.000000,-0.000000,0.052167,0.000000,0.000000,-0.052167,-0.000000,0.000000,0.000000,0.000000,0.000000,1.000000);">
                  <model src="assets/assets-0.xml#Box003"></model>
@@ -407,6 +437,13 @@
                     <span id="value_uIntensity"></span>
 
                 </div>
+                <br/>
+                <select id="sceneView">
+                    <option value="scene1">Scene View1</option>
+                    <option value="scene2">Scene View2</option>
+                    <option value="scene3">Scene View3</option>
+                    <option value="scene4">Scene View4</option>
+                </select>
             </td>
 
         </div>
